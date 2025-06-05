@@ -33,8 +33,8 @@ public class GatewayConfig {
                                 // Report service
                                 .route("report_route", r -> r.path("/report/**")
                                                 .filters(f -> f.rewritePath("/report(?<segment>/?.*)",
-                                                                "/api/report${segment}"))
-                                                .uri("lb://REPORTMICROSERVICE"))
+                                                                "/api/reports${segment}"))
+                                                .uri("lb://REPORTANALYSIS"))
 
                                 .build();
         }
